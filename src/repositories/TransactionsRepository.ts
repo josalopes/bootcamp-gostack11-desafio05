@@ -20,12 +20,10 @@ class TransactionsRepository {
   }
 
   public all(): Transaction[] {
-    // TODO
     return this.transactions;
   }
 
   public getBalance(): Balance {
-    // TODO
     const { income, outcome } = this.transactions.reduce(
       (accumulator: Balance, transaction: Transaction) => {
         switch (transaction.type) {
@@ -51,7 +49,6 @@ class TransactionsRepository {
   }
 
   public create({ title, value, type }: CreateTransactionDTO): Transaction {
-    // TODO
     const transaction = new Transaction({ title, value, type });
 
     this.transactions.push(transaction);
